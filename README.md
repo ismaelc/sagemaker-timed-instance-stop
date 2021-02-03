@@ -7,6 +7,6 @@ In your Sagemaker Jupyter notebook (Python), run these commands in separate cell
     !wget -O timedstop.py https://raw.githubusercontent.com/ismaelc/sagemaker-timed-instance-stop/main/timedstop.py
  --
     
-    from timedstop import startCountdown
+    from timedstop import setCountdown
     setCountdown('<instance name>', <seconds>).start()
     #  setCountdown('chrisi-idletest', 3600).start()

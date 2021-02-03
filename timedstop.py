@@ -11,6 +11,6 @@ def stopInstance(instance):
     sm.stop_notebook_instance(NotebookInstanceName=instance)
 
 def startCountdown(instance, seconds):
-    t = th.Timer(seconds, stopInstance(instance))
+    t = th.Timer(float(seconds), stopInstance(instance))
     t.start() 
     print('Timer started')

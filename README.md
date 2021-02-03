@@ -1,12 +1,12 @@
 # sagemaker-timed-instance-stop
 
 ### To use
-In your Sagemaker Jupyter notebook (Python), run these commands in separate cells:
+In your Sagemaker Jupyter notebook (Python), copy the snippets below to your notebook cells in order:
 
- 
-    !wget -O timedstop.py https://raw.githubusercontent.com/ismaelc/sagemaker-timed-instance-stop/main/timedstop.py
- --
-    
-    from timedstop import setCountdown
-    setCountdown('<instance name>', <seconds>).start()
-    #  setCountdown('chrisi-idletest', 3600).start()
+Description | Code
+------ | ------
+Download script into your instance   | `!wget -O timedstop.py https://raw.githubusercontent.com/ismaelc/sagemaker-timed-instance-stop/main/timedstop.py`
+Import library | `from timedstop import setCountdown`
+Initialize timer | `t = setCountdown('<instance name>', <seconds>)`
+Start timer | `t.start()`
+Stop timer | `t.cancel()`

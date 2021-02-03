@@ -1,7 +1,7 @@
 # Run me to set timer to close your Sagemaker instance
 import threading as th
 import boto3
-import regex
+import re
 
 
 def setCountdown(instance, time):
@@ -22,7 +22,7 @@ def resolveTime(time):
         texts = time.lower().split()
         items = []
         for t in texts:
-            match = regex.match(r"([0-9]+)([a-z]+)", t)
+            match = re.match(r"([0-9]+)([a-z]+)", t)
             if match:
                 items.append(match.groups())
 

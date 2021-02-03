@@ -6,10 +6,11 @@ import boto3
 #seconds = 5.0
 
 def stopInstance(instance):
-    print("Stop instance")
+    print('Stopped instance')
     sm = boto3.client('sagemaker')
     sm.stop_notebook_instance(NotebookInstanceName=instance)
 
 def startCountdown(instance, seconds):
     t = th.Timer(seconds, stopInstance(instance))
     t.start() 
+    print('Timer started')
